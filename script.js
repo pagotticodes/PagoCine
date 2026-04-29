@@ -3,7 +3,7 @@
 const moviesData = {
   mario: {
     title: "Super Mario Galaxy O Filme",
-    image: "imgs/mariogalaxy.jpg",
+    image: "mariogalaxy.jpg",
     date: "Fevereiro de 2026",
     duration: "1h 45min",
     synopsis:
@@ -11,7 +11,7 @@ const moviesData = {
   },
   fnaf: {
     title: "Five Nights at Freddy's 2",
-    image: "imgs/fnaf2.jpg",
+    image: "fnaf2.jpg",
     date: "Dezembro de 2025",
     duration: "1h 55min",
     synopsis:
@@ -19,7 +19,7 @@ const moviesData = {
   },
   minecraft: {
     title: "Um Filme Minecraft",
-    image: "imgs/minecraftmovie.jpg",
+    image: "minecraftmovie.jpg",
     date: "Abril de 2025",
     duration: "1h 40min",
     synopsis:
