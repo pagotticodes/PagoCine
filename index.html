@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAGOCINE - A Magia do Cinema</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <span class="logo-pago">PAGO</span><span class="logo-cine">CINE</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#filmes">Em Cartaz</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="hero-icons">
+        <div class="icon-item" style="--delay: 0s">
+          <i class="fas fa-film"></i>
+        </div>
+        <div class="icon-item" style="--delay: 0.2s">
+          <i class="fas fa-ticket"></i>
+        </div>
+        <div class="icon-item" style="--delay: 0.4s">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="icon-item" style="--delay: 0.6s">
+          <i class="fas fa-clapper"></i>
+        </div>
+        <div class="icon-item" style="--delay: 0.8s">
+          <i class="fas fa-video"></i>
+        </div>
+        <div class="icon-item" style="--delay: 1s">
+          <i class="fas fa-camera"></i>
+        </div>
+      </div>
+      <div class="hero-content">
+        <h1>Bem-vindo ao PAGOCINE</h1>
+        <p>
+          A melhor experiência cinematográfica, idealizada por rafael pagotti de
+          lima.
+        </p>
+        <a href="#filmes" class="btn-primary">Ver Filmes</a>
+      </div>
+    </section>
+
+    <section id="filmes">
+      <h2>Filmes em Destaque</h2>
+      <div class="movies-grid">
+        <div class="movie-card">
+          <img
+            src="imgs/mariogalaxy.jpg"
+            alt="Capa do filme Super Mario Galaxy"
+          />
+          <h3>Super Mario Galaxy</h3>
+          <button class="btn-details" data-movie="mario">Ver detalhes</button>
+        </div>
+
+        <div class="movie-card">
+          <img
+            src="imgs/fnaf2.jpg"
+            alt="Capa do filme Five Nights at Freddy's 2"
+          />
+          <h3>Five Nights at Freddy's 2</h3>
+          <button class="btn-details" data-movie="fnaf">Ver detalhes</button>
+        </div>
+
+        <div class="movie-card">
+          <img src="imgs/minecraftmovie.jpg" alt="Capa do filme Minecraft" />
+          <h3>Um Filme Minecraft</h3>
+          <button class="btn-details" data-movie="minecraft">
+            Ver detalhes
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Fale Conosco</h2>
+      <form id="contact-form">
+        <div class="input-group">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            required
+            placeholder="Seu nome completo"
+          />
+        </div>
+        <div class="input-group">
+          <label for="email">E-mail:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="seu@email.com"
+          />
+        </div>
+        <div class="input-group">
+          <label for="mensagem">Mensagem:</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="5"
+            required
+            placeholder="Escreva sua mensagem aqui..."
+          ></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Enviar Mensagem</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 PAGOCINE. Todos os direitos reservados.</p>
+      <p>Feito por <strong>rafael pagotti de lima</strong>.</p>
+    </footer>
+
+    <div id="movie-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-body">
+          <div class="modal-image">
+            <img id="modal-movie-image" src="" alt="Capa do filme" />
+          </div>
+          <div class="modal-info">
+            <h2 id="modal-title">Título do Filme</h2>
+            <p><strong>Lançamento:</strong> <span id="modal-date"></span></p>
+            <p><strong>Duração:</strong> <span id="modal-duration"></span></p>
+            <p><strong>Sinopse:</strong> <span id="modal-synopsis"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

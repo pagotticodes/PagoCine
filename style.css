@@ -1,0 +1,372 @@
+/* Variáveis para facilitar a mudança de cores */
+:root {
+  --bg-color: #141414;
+  --text-color: #f5f5f5;
+  --primary-color: #e50914; /* Vermelho estilo cinema */
+  --primary-hover: #b80710;
+  --card-bg: #222;
+}
+
+/* Reset básico para tirar margens padrão dos navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* --- Cabeçalho --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo-pago {
+  color: var(--text-color);
+}
+
+.logo-cine {
+  color: var(--primary-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* --- Hero Section --- */
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(20, 20, 20, 0.8), rgba(20, 20, 20, 1)),
+    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070")
+      center/cover;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ícones animados do hero */
+.hero-icons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.icon-item {
+  font-size: 80px;
+  color: rgba(229, 9, 20, 0.15);
+  animation: float 6s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(10deg);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ccc;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* --- Botões --- */
+.btn-primary,
+.btn-details {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.btn-primary:hover,
+.btn-details:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-details {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* --- Seção de Filmes --- */
+#filmes {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#filmes h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.movie-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 15px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.movie-card h3 {
+  font-size: 1.4rem;
+}
+
+/* --- Formulário de Contato --- */
+#contato {
+  background-color: #0a0a0a;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #222;
+  color: white;
+}
+
+/* --- Rodapé --- */
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #000;
+  color: #888;
+}
+
+footer strong {
+  color: var(--primary-color);
+}
+
+/* --- Estilos do Modal (JavaScript) --- */
+.modal {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: var(--card-bg);
+  margin: 10% auto;
+  padding: 30px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  position: relative;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.modal-body {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.modal-image {
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.modal-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.modal-info {
+  flex: 1;
+}
+
+.close-btn {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--primary-color);
+}
+
+.modal-info h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.modal-info p {
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+/* Responsividade do modal */
+@media (max-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .modal-image {
+    width: 100%;
+  }
+}
+
+/* Responsividade do hero */
+@media (max-width: 768px) {
+  .hero-icons {
+    gap: 10px;
+  }
+
+  .icon-item {
+    font-size: 50px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-item {
+    font-size: 35px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animação para o modal aparecer suavemente */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
